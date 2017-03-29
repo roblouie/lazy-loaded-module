@@ -1,0 +1,15 @@
+<h1>About</h1>
+
+<p>This page was lazily loaded, but so was it's whole module, which can includes multiple components and services.
+Services can be provided from the module and will be module scoped, unlike eagerly loaded modules where services
+provided from the module are application scoped. Any service is still a singleton, it's just scoped to the module.</p>
+
+<p>In addition to this page, a service has been loaded, as well as another page, because they were all part of
+this page's module</p>
+
+<p>Set a number here, it will be set in the service</p>
+<input #setANumber type="number" (keyup)="setNumber(setANumber.value)">
+
+<div>
+  <a routerLink="subpage" routerLinkActive="active">Go to page two of the lazy loaded module</a>
+</div>
